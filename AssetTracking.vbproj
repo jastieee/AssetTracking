@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA63F3F8-8E23-4D09-9C66-F40ED014CE0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>AssetTracking</RootNamespace>
+    <AssemblyName>AssetTracking</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AssetTracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AssetTracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>resources\new-ndas-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.30.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.30.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.9.4.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.7.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZstdSharp, Version=0.8.5.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.8.5\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.10.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.10\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.10.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.10\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDialog.Designer.vb">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutDialog.vb" />
+    <Compile Include="ActivityLogsFrm.Designer.vb">
+      <DependentUpon>ActivityLogsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityLogsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecurity\AddEditDepartmentFrm.Designer.vb">
+      <DependentUpon>AddEditDepartmentFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecurity\AddEditDepartmentFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecurity\DepartmentManagementFrm.Designer.vb">
+      <DependentUpon>DepartmentManagementFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecurity\DepartmentManagementFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecurity\ReportsAnalyticsFrm.Designer.vb">
+      <DependentUpon>ReportsAnalyticsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecurity\ReportsAnalyticsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecurity\SystemSettingsFrm.Designer.vb">
+      <DependentUpon>SystemSettingsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecurity\SystemSettingsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecurity\ViewDepartmentDetailsFrm.Designer.vb">
+      <DependentUpon>ViewDepartmentDetailsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecurity\ViewDepartmentDetailsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovalForms\ApproveRequestsFrm.Designer.vb">
+      <DependentUpon>ApproveRequestsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalForms\ApproveRequestsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\AddEditAssetFrm.Designer.vb">
+      <DependentUpon>AddEditAssetFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\AddEditAssetFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\AddMaintenanceRecordDialog.Designer.vb">
+      <DependentUpon>AddMaintenanceRecordDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\AddMaintenanceRecordDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\AssetIssuedEmployeeFrm.Designer.vb">
+      <DependentUpon>AssetIssuedEmployeeFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\AssetIssuedEmployeeFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\IssueAssetFrm.Designer.vb">
+      <DependentUpon>IssueAssetFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\IssueAssetFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\MaintenanceRecordsFrm.Designer.vb">
+      <DependentUpon>MaintenanceRecordsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\MaintenanceRecordsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\ViewEmployeeHistoryFrm.Designer.vb">
+      <DependentUpon>ViewEmployeeHistoryFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\ViewEmployeeHistoryFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connections\SecurityAccessManager.vb" />
+    <Compile Include="ConsumablesForm\ConsumableCategoriesFrm.Designer.vb">
+      <DependentUpon>ConsumableCategoriesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesForm\ConsumableCategoriesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumablesForm\ConsumableDetailsViewerFrm.Designer.vb">
+      <DependentUpon>ConsumableDetailsViewerFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesForm\ConsumableDetailsViewerFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumablesForm\ConsumableIssuanceHistoryFrm.Designer.vb">
+      <DependentUpon>ConsumableIssuanceHistoryFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesForm\ConsumableIssuanceHistoryFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumablesForm\ConsumableIssuedEmployeeFrm.Designer.vb">
+      <DependentUpon>ConsumableIssuedEmployeeFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesForm\ConsumableIssuedEmployeeFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumablesForm\IssueConsumableFrm.Designer.vb">
+      <DependentUpon>IssueConsumableFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesForm\IssueConsumableFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\ViewConsumableDetailsFrm.Designer.vb">
+      <DependentUpon>ViewConsumableDetailsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ViewConsumableDetailsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumablesForm\ViewEmployeeConsumableHistoryFrm.Designer.vb">
+      <DependentUpon>ViewEmployeeConsumableHistoryFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesForm\ViewEmployeeConsumableHistoryFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\AddMaintenanceFrm.Designer.vb">
+      <DependentUpon>AddMaintenanceFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AddMaintenanceFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\AssetCategoriesFrm.Designer.vb">
+      <DependentUpon>AssetCategoriesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\AssetCategoriesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\AssetDetailsViewerFrm.Designer.vb">
+      <DependentUpon>AssetDetailsViewerFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\AssetDetailsViewerFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\AssetIssuanceHistoryFrm.Designer.vb">
+      <DependentUpon>AssetIssuanceHistoryFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\AssetIssuanceHistoryFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\AssetTransfersFrm.Designer.vb">
+      <DependentUpon>AssetTransfersFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AssetTransfersFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\QRCodeGeneratorFrm.Designer.vb">
+      <DependentUpon>QRCodeGeneratorFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\QRCodeGeneratorFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connections\ClsDatabaseConnection.vb" />
+    <Compile Include="Connections\frmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connections\Main.vb" />
+    <Compile Include="Connections\ModGlobalVariables.vb" />
+    <Compile Include="ConsumablesForm\AddEditConsumableFrm.Designer.vb">
+      <DependentUpon>AddEditConsumableFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesForm\AddEditConsumableFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\InventoryStatusFrm.Designer.vb">
+      <DependentUpon>InventoryStatusFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\InventoryStatusFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumablesForm\ManageConsumablesFrm.Designer.vb">
+      <DependentUpon>ManageConsumablesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesForm\ManageConsumablesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\ProvisionRecordsFrm.Designer.vb">
+      <DependentUpon>ProvisionRecordsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ProvisionRecordsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\TransferConsumablesFrm.Designer.vb">
+      <DependentUpon>TransferConsumablesFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TransferConsumablesFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddEditEmployeeFrm.Designer.vb">
+      <DependentUpon>AddEditEmployeeFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\AddEditEmployeeFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployeeDetailsViewFrm.Designer.vb">
+      <DependentUpon>EmployeeDetailsViewFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeDetailsViewFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployeeIssuedItemsFrm.Designer.vb">
+      <DependentUpon>EmployeeIssuedItemsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeIssuedItemsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployeeManagementFrm.Designer.vb">
+      <DependentUpon>EmployeeManagementFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeManagementFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployeeQrCodePrintFrm.Designer.vb">
+      <DependentUpon>EmployeeQrCodePrintFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeQrCodePrintFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginFrm.Designer.vb">
+      <DependentUpon>loginFrm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainFrm.Designer.vb">
+      <DependentUpon>mainFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetsForm\ManageAssetsFrm.Designer.vb">
+      <DependentUpon>ManageAssetsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsForm\ManageAssetsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Database\NewTransferFrm.Designer.vb">
+      <DependentUpon>NewTransferFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Database\NewTransferFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecurity\UserManagementFrm.Designer.vb">
+      <DependentUpon>UserManagementFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecurity\UserManagementFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherSuppliesnMaterials\ImportPreviewFrm.Designer.vb">
+      <DependentUpon>ImportPreviewFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherSuppliesnMaterials\ImportPreviewFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherSuppliesnMaterials\OtherSuppliesMaterialsFrm.Designer.vb">
+      <DependentUpon>OtherSuppliesMaterialsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherSuppliesnMaterials\OtherSuppliesMaterialsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestForm\RequestHistoryFrm.Designer.vb">
+      <DependentUpon>RequestHistoryFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForm\RequestHistoryFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestForm\RequestSlipFrm.Designer.vb">
+      <DependentUpon>RequestSlipFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForm\RequestSlipFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestForm\RequestStatusFrm.Designer.vb">
+      <DependentUpon>RequestStatusFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForm\RequestStatusFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ActivityLogsFrm.resx">
+      <DependentUpon>ActivityLogsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSecurity\ReportsAnalyticsFrm.resx">
+      <DependentUpon>ReportsAnalyticsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSecurity\SystemSettingsFrm.resx">
+      <DependentUpon>SystemSettingsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSecurity\ViewDepartmentDetailsFrm.resx">
+      <DependentUpon>ViewDepartmentDetailsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApprovalForms\ApproveRequestsFrm.resx">
+      <DependentUpon>ApproveRequestsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\AddEditAssetFrm.resx">
+      <DependentUpon>AddEditAssetFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\AddMaintenanceRecordDialog.resx">
+      <DependentUpon>AddMaintenanceRecordDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\AssetIssuedEmployeeFrm.resx">
+      <DependentUpon>AssetIssuedEmployeeFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\IssueAssetFrm.resx">
+      <DependentUpon>IssueAssetFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\MaintenanceRecordsFrm.resx">
+      <DependentUpon>MaintenanceRecordsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\ViewEmployeeHistoryFrm.resx">
+      <DependentUpon>ViewEmployeeHistoryFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesForm\ConsumableCategoriesFrm.resx">
+      <DependentUpon>ConsumableCategoriesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesForm\ConsumableIssuanceHistoryFrm.resx">
+      <DependentUpon>ConsumableIssuanceHistoryFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesForm\ConsumableIssuedEmployeeFrm.resx">
+      <DependentUpon>ConsumableIssuedEmployeeFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesForm\IssueConsumableFrm.resx">
+      <DependentUpon>IssueConsumableFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesForm\ViewEmployeeConsumableHistoryFrm.resx">
+      <DependentUpon>ViewEmployeeConsumableHistoryFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\AddMaintenanceFrm.resx">
+      <DependentUpon>AddMaintenanceFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\AssetCategoriesFrm.resx">
+      <DependentUpon>AssetCategoriesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\AssetDetailsViewerFrm.resx">
+      <DependentUpon>AssetDetailsViewerFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\AssetIssuanceHistoryFrm.resx">
+      <DependentUpon>AssetIssuanceHistoryFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\AssetTransfersFrm.resx">
+      <DependentUpon>AssetTransfersFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesForm\AddEditConsumableFrm.resx">
+      <DependentUpon>AddEditConsumableFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesForm\ManageConsumablesFrm.resx">
+      <DependentUpon>ManageConsumablesFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeIssuedItemsFrm.resx">
+      <DependentUpon>EmployeeIssuedItemsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeManagementFrm.resx">
+      <DependentUpon>EmployeeManagementFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeQrCodePrintFrm.resx">
+      <DependentUpon>EmployeeQrCodePrintFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginFrm.resx">
+      <DependentUpon>loginFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainFrm.resx">
+      <DependentUpon>mainFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsForm\ManageAssetsFrm.resx">
+      <DependentUpon>ManageAssetsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\NewTransferFrm.resx">
+      <DependentUpon>NewTransferFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSecurity\UserManagementFrm.resx">
+      <DependentUpon>UserManagementFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherSuppliesnMaterials\OtherSuppliesMaterialsFrm.resx">
+      <DependentUpon>OtherSuppliesMaterialsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestForm\RequestHistoryFrm.resx">
+      <DependentUpon>RequestHistoryFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestForm\RequestStatusFrm.resx">
+      <DependentUpon>RequestStatusFrm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="resources\NDAS-short-logo.png" />
+    <Content Include="resources\NDAS_new_LOGO-01_v1.png" />
+    <Content Include="resources\new-ndas-icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

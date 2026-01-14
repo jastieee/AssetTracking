@@ -1,0 +1,1377 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AssetTracking
+</name>
+</assembly>
+<members>
+<member name="T:AssetTracking.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AssetTracking.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AssetTracking.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:AssetTracking.My.Resources.Resources.NDAS_new_LOGO_01_v1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:AssetTracking.My.Resources.Resources.NDAS_short_logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.SetDefaultValues">
+ <summary>
+ Set default values for new assets
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.LoadCategories">
+ <summary>
+ Load asset categories
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.cboCategory_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Load subcategories based on selected category
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.cboSubcategory_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Generate asset tag when subcategory changes
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.GenerateAssetTag">
+ <summary>
+ Generate asset tag based on subcategory
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.GetNextAssetNumber(System.Int32,System.String)">
+ <summary>
+ Get next asset number for subcategory
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.LoadDepartments">
+ <summary>
+ Load departments
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.LoadAssetData">
+ <summary>
+ Load asset data for edit mode
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.ValidateInputs">
+ <summary>
+ Validate form inputs
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.AssetTagExists(System.String)">
+ <summary>
+ Check if asset tag already exists
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.GetOriginalAssetTag">
+ <summary>
+ Get original asset tag (for edit mode validation)
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.btnSave_Click(System.Object,System.EventArgs)">
+ <summary>
+ Save button click handler
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cancel button click handler
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.AddEditAssetFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.InitializeForm">
+ <summary>
+ Initialize form settings and styles
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.StyleDataGridView(System.Windows.Forms.DataGridView)">
+ <summary>
+ Style DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.LoadStatusFilters">
+ <summary>
+ Load status filters
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.LoadDepartments">
+ <summary>
+ Load departments for filter
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.LoadEmployees">
+ <summary>
+ Load employees - prioritizing those without assets
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.LoadEmployeeDetails(System.Int32)">
+ <summary>
+ Load employee details
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.LoadIssuedAssets(System.Int32)">
+ <summary>
+ Load issued assets for selected employee
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.GenerateQRCode(System.String)">
+ <summary>
+ Generate QR Code for employee
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.btnIssueAsset_Click(System.Object,System.EventArgs)">
+ <summary>
+ Issue Asset to Employee
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.dgvEmployees_SelectionChanged(System.Object,System.EventArgs)">
+ <summary>
+ Employee selection changed
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.ClearEmployeeDetails">
+ <summary>
+ Clear employee details display
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.txtSearchEmployee_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Search text changed with delay
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.cboDepartmentFilter_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Department filter changed
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.cboStatusFilter_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Status filter changed
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.btnRefresh_Click(System.Object,System.EventArgs)">
+ <summary>
+ Refresh data
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.btnViewHistory_Click(System.Object,System.EventArgs)">
+ <summary>
+ View issuance history for employee
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuedEmployeeFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.IssueAssetFrm.StyleDataGridView(System.Windows.Forms.DataGridView)">
+ <summary>
+ Style DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.IssueAssetFrm.LoadAvailableAssets">
+ <summary>
+ Load available assets (In Stock only)
+ </summary>
+</member>
+<member name="M:AssetTracking.IssueAssetFrm.btnIssue_Click(System.Object,System.EventArgs)">
+ <summary>
+ Issue button click
+ </summary>
+</member>
+<member name="M:AssetTracking.IssueAssetFrm.IssueAssetToEmployee(System.Int32,System.Int32,System.String)">
+ <summary>
+ Issue asset to employee
+ </summary>
+</member>
+<member name="M:AssetTracking.IssueAssetFrm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cancel button click
+ </summary>
+</member>
+<member name="M:AssetTracking.IssueAssetFrm.txtSearch_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Search text changed
+ </summary>
+</member>
+<member name="M:AssetTracking.ViewEmployeeHistoryFrm.StyleDataGridView(System.Windows.Forms.DataGridView)">
+ <summary>
+ Style DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.ViewEmployeeHistoryFrm.LoadHistory">
+ <summary>
+ Load history data
+ </summary>
+</member>
+<member name="M:AssetTracking.ViewEmployeeHistoryFrm.btnClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Close button click
+ </summary>
+</member>
+<member name="M:AssetTracking.ViewEmployeeHistoryFrm.btnExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Export to CSV button click
+ </summary>
+</member>
+<member name="M:AssetTracking.ViewEmployeeHistoryFrm.cboStatusFilter_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Filter status changed
+ </summary>
+</member>
+<member name="M:AssetTracking.ViewEmployeeHistoryFrm.InitializeFilters">
+ <summary>
+ Initialize filter combo box
+ </summary>
+</member>
+<member name="M:AssetTracking.SecurityAccessManager.LoadUserAccessPermissions(System.Int32)">
+ <summary>
+ Load user access permissions from database
+ </summary>
+</member>
+<member name="M:AssetTracking.SecurityAccessManager.GetUserModuleAccess(System.Int32)">
+ <summary>
+ Get list of all modules with their access status for a user
+ </summary>
+</member>
+<member name="M:AssetTracking.SecurityAccessManager.UpdateModuleAccess(System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Update user access for a specific module
+ </summary>
+</member>
+<member name="M:AssetTracking.SecurityAccessManager.GrantFullAccess(System.Int32)">
+ <summary>
+ Grant full access to all modules for a user (typically for Admin role)
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.StyleDataGridViews">
+ <summary>
+ Style DataGridViews
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.StyleDataGridView(System.Windows.Forms.DataGridView)">
+ <summary>
+ Style a DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.LoadConsumableDetails">
+ <summary>
+ Load consumable details
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.UpdateStockStatus">
+ <summary>
+ Update stock status display
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.LoadIssuanceHistory">
+ <summary>
+ Load issuance history
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.LoadStockMovement">
+ <summary>
+ Load stock movement / request history
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.btnEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Edit consumable button
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.btnDelete_Click(System.Object,System.EventArgs)">
+ <summary>
+ Delete consumable button
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.btnAdjustStock_Click(System.Object,System.EventArgs)">
+ <summary>
+ Adjust stock button
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.UpdateStock(System.Int32,System.Int32)">
+ <summary>
+ Update stock in database
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.btnPrintLabel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Print label button
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.btnClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Close button
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.ConsumableDetailsViewerFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="P:AssetTracking.AddMaintenanceFrm.MaintenanceId">
+ <summary>
+ Property for Maintenance ID (0 for new, >0 for edit)
+ </summary>
+</member>
+<member name="P:AssetTracking.AddMaintenanceFrm.SelectedAssetId">
+ <summary>
+ Property for pre-selected Asset ID
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.AddMaintenanceFrm_Load(System.Object,System.EventArgs)">
+ <summary>
+ Form Load - Initialize
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.LoadAssets">
+ <summary>
+ Load assets for dropdown
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.LoadMaintenanceData">
+ <summary>
+ Load maintenance data for editing
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.btnSave_Click(System.Object,System.EventArgs)">
+ <summary>
+ Save button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.ValidateInputs">
+ <summary>
+ Validate form inputs
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cancel button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.txtCost_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ Cost textbox - allow only numbers and decimal
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.AddMaintenanceFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.InitializeForm">
+ <summary>
+ Initialize form settings and styles
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.StyleDataGridView(System.Windows.Forms.DataGridView)">
+ <summary>
+ Style DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.LoadCategories">
+ <summary>
+ Load all categories into the DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnSaveCategory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Save or update category
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnClearCategory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Clear category form
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnEditCategory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Edit selected category
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnDeleteCategory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Delete selected category
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnRefreshCategories_Click(System.Object,System.EventArgs)">
+ <summary>
+ Refresh categories
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.dgvCategories_SelectionChanged(System.Object,System.EventArgs)">
+ <summary>
+ Enable/disable edit and delete buttons based on selection
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.LoadCategoriesForComboBoxes">
+ <summary>
+ Load categories for combo boxes
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.LoadSubcategories">
+ <summary>
+ Load subcategories with optional filter
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.cboFilterCategory_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Filter subcategories by category
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnSaveSubcategory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Save or update subcategory
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnClearSubcategory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Clear subcategory form
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnEditSubcategory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Edit selected subcategory
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnDeleteSubcategory_Click(System.Object,System.EventArgs)">
+ <summary>
+ Delete selected subcategory
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.btnRefreshSubcategories_Click(System.Object,System.EventArgs)">
+ <summary>
+ Refresh subcategories
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.dgvSubcategories_SelectionChanged(System.Object,System.EventArgs)">
+ <summary>
+ Enable/disable edit and delete buttons based on selection
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetCategoriesFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.StyleDataGridViews">
+ <summary>
+ Style DataGridViews
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.StyleDataGridView(System.Windows.Forms.DataGridView)">
+ <summary>
+ Style a DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.LoadAssetDetails">
+ <summary>
+ Load asset details
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.SetStatusColor(System.Windows.Forms.Label,System.String)">
+ <summary>
+ Set status label color
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.SetConditionColor(System.Windows.Forms.Label,System.String)">
+ <summary>
+ Set condition label color
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.LoadIssuanceHistory">
+ <summary>
+ Load issuance history
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.LoadMaintenanceHistory">
+ <summary>
+ Load maintenance history
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.btnEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Edit asset button
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.btnDelete_Click(System.Object,System.EventArgs)">
+ <summary>
+ Delete asset button
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.btnAddMaintenance_Click(System.Object,System.EventArgs)">
+ <summary>
+ Add maintenance record button
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.btnRequestDisposal_Click(System.Object,System.EventArgs)">
+ <summary>
+ Request disposal button
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.btnPrintQR_Click(System.Object,System.EventArgs)">
+ <summary>
+ Print QR code button
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.btnClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Close button
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetDetailsViewerFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.InitializeForm">
+ <summary>
+ Initialize form settings and styles
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.StyleDataGridView(System.Windows.Forms.DataGridView)">
+ <summary>
+ Style DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.LoadFilterData">
+ <summary>
+ Load filter data (Categories, Departments, Status)
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.LoadIssuanceHistory">
+ <summary>
+ Load complete issuance history with filters
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.btnSearch_Click(System.Object,System.EventArgs)">
+ <summary>
+ Search button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.btnClearFilters_Click(System.Object,System.EventArgs)">
+ <summary>
+ Clear filters button
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.txtSearchAsset_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Asset search text changed with delay
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.txtSearchEmployee_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Employee search text changed with delay
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.btnRefresh_Click(System.Object,System.EventArgs)">
+ <summary>
+ Refresh data
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.btnReturnAsset_Click(System.Object,System.EventArgs)">
+ <summary>
+ Return asset
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.btnExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Export to Excel
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.btnPrint_Click(System.Object,System.EventArgs)">
+ <summary>
+ Print report
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.ExportToCSV(System.String)">
+ <summary>
+ Export to CSV
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.ExportToExcel(System.String)">
+ <summary>
+ Export to Excel (basic implementation)
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.LogActivity(System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetIssuanceHistoryFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.AssetTransfersFrm_Load(System.Object,System.EventArgs)">
+ <summary>
+ Form Load - Initialize
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.LoadTransferList(System.String,System.String)">
+ <summary>
+ Load transfer list into DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.ApplyStatusColors">
+ <summary>
+ Apply color coding based on status
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.FilterRadioButton_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ Filter radio button changed
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.btnSearchTransfer_Click(System.Object,System.EventArgs)">
+ <summary>
+ Search button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.txtSearchTransfer_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ Search textbox key press
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.btnNewTransfer_Click(System.Object,System.EventArgs)">
+ <summary>
+ New Transfer button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.dgvTransfers_SelectionChanged(System.Object,System.EventArgs)">
+ <summary>
+ DataGridView selection changed
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.DisableActionButtons">
+ <summary>
+ Disable all action buttons
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.btnViewDetails_Click(System.Object,System.EventArgs)">
+ <summary>
+ View Details button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.btnApprove_Click(System.Object,System.EventArgs)">
+ <summary>
+ Approve button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.ApproveTransfer(System.Int32)">
+ <summary>
+ Approve transfer
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.btnReject_Click(System.Object,System.EventArgs)">
+ <summary>
+ Reject button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.RejectTransfer(System.Int32,System.String)">
+ <summary>
+ Reject transfer
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.btnExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Export button click
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity
+ </summary>
+</member>
+<member name="M:AssetTracking.AssetTransfersFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.QRCodeGeneratorFrm.GenerateQRCode">
+ <summary>
+ Generate QR Code image
+ </summary>
+</member>
+<member name="M:AssetTracking.QRCodeGeneratorFrm.btnPrint_Click(System.Object,System.EventArgs)">
+ <summary>
+ Print QR code directly to Argox O4-250 PPLZ (no text)
+ </summary>
+</member>
+<member name="M:AssetTracking.QRCodeGeneratorFrm.printDoc_PrintPage(System.Object,System.Drawing.Printing.PrintPageEventArgs)">
+ <summary>
+ What gets printed - QR only, centered on the sticker
+ </summary>
+</member>
+<member name="M:AssetTracking.QRCodeGeneratorFrm.btnSave_Click(System.Object,System.EventArgs)">
+ <summary>
+ Save QR Code button click
+ </summary>
+</member>
+<member name="M:AssetTracking.QRCodeGeneratorFrm.btnCopyClipboard_Click(System.Object,System.EventArgs)">
+ <summary>
+ Copy to Clipboard button click
+ </summary>
+</member>
+<member name="M:AssetTracking.QRCodeGeneratorFrm.btnClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Close button click
+ </summary>
+</member>
+<member name="M:AssetTracking.QRCodeGeneratorFrm.QRCodeGeneratorFrm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ Form closing - cleanup
+ </summary>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.Initialize">
+ <summary>
+ Initialize and test database connection on application startup
+ </summary>
+ <returns>True if connection successful, False otherwise</returns>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.GetConnection">
+ <summary>
+ Get an open database connection
+ </summary>
+ <returns>Open MySqlConnection or Nothing on failure</returns>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.ShowSettingsDialog">
+ <summary>
+ Show connection settings dialog
+ </summary>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.btnTest_Click(System.Object,System.EventArgs)">
+ <summary>
+ Test connection button click event
+ </summary>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.btnOK_Click(System.Object,System.EventArgs)">
+ <summary>
+ Save connection settings
+ </summary>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.btnClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cancel button click event
+ </summary>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.SaveToRegistry">
+ <summary>
+ Save connection details to registry with encrypted password
+ </summary>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.LoadFromRegistry">
+ <summary>
+ Load connection details from registry
+ </summary>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.EncryptPassword(System.String)">
+ <summary>
+ Encrypt password using ProtectedData
+ </summary>
+</member>
+<member name="M:AssetTracking.ClsDatabaseConnection.DecryptPassword(System.String)">
+ <summary>
+ Decrypt password using ProtectedData
+ </summary>
+</member>
+<member name="M:AssetTracking.Main.Main">
+ <summary>
+ Main entry point for the Asset Tracking System
+ </summary>
+</member>
+<member name="M:AssetTracking.Main.InitializeApplication(AssetTracking.frmSplash)">
+ <summary>
+ Initialize application with progress updates
+ </summary>
+</member>
+<member name="F:AssetTracking.ModGlobalVariables.gMySQLServer">
+ <summary>
+ Global connection details for MySQL database (Asset Tracking System)
+ </summary>
+</member>
+<member name="F:AssetTracking.ModGlobalVariables.connPrefix">
+ <summary>
+ Application name prefix for registry
+ </summary>
+</member>
+<member name="M:AssetTracking.ModGlobalVariables.HasAccess(System.Int32)">
+ <summary>
+ Check if current user has access to a specific module
+ </summary>
+</member>
+<member name="M:AssetTracking.ModGlobalVariables.ClearUserSession">
+ <summary>
+ Clear user session data on logout
+ </summary>
+</member>
+<member name="F:AssetTracking.ModGlobalVariables.gApplicationName">
+ <summary>
+ Application settings
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.InventoryStatusFrm_Load(System.Object,System.EventArgs)">
+ <summary>
+ Form Load - Initialize everything
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.LoadDepartmentFilter">
+ <summary>
+ Load department filter dropdown
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.LoadStatusFilter">
+ <summary>
+ Load status filter dropdown
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.LoadInventoryStatus(System.Int32,System.String)">
+ <summary>
+ Load inventory status data
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.ApplyStatusColors">
+ <summary>
+ Apply color coding to rows based on stock status
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.UpdateSummaryCounts(System.Data.DataTable)">
+ <summary>
+ Update summary counts at the bottom
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.btnRefresh_Click(System.Object,System.EventArgs)">
+ <summary>
+ Refresh button click
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.cboFilterDepartment_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Department filter changed
+ </summary>
+</member>
+<member name="M:AssetTracking.InventoryStatusFrm.cboFilterStatus_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Status filter changed
+ </summary>
+</member>
+<member name="M:AssetTracking.ProvisionRecordsFrm.ProvisionRecordsFrm_Load(System.Object,System.EventArgs)">
+ <summary>
+ Form Load - Initialize everything
+ </summary>
+</member>
+<member name="M:AssetTracking.ProvisionRecordsFrm.LoadDepartmentFilter">
+ <summary>
+ Load department filter dropdown
+ </summary>
+</member>
+<member name="M:AssetTracking.ProvisionRecordsFrm.LoadProvisionRecords(System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+ <summary>
+ Load provision records
+ </summary>
+</member>
+<member name="M:AssetTracking.ProvisionRecordsFrm.btnSearch_Click(System.Object,System.EventArgs)">
+ <summary>
+ Search button click
+ </summary>
+</member>
+<member name="M:AssetTracking.ProvisionRecordsFrm.dgvProvisions_SelectionChanged(System.Object,System.EventArgs)">
+ <summary>
+ DataGridView selection changed
+ </summary>
+</member>
+<member name="M:AssetTracking.ProvisionRecordsFrm.btnViewDetails_Click(System.Object,System.EventArgs)">
+ <summary>
+ View Details button click
+ </summary>
+</member>
+<member name="M:AssetTracking.ProvisionRecordsFrm.ShowProvisionDetails(System.Int32)">
+ <summary>
+ Show provision details
+ </summary>
+</member>
+<member name="M:AssetTracking.ProvisionRecordsFrm.btnExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Export button click
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.TransferConsumablesFrm_Load(System.Object,System.EventArgs)">
+ <summary>
+ Form Load - Initialize everything
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.LoadTransferList(System.String,System.String)">
+ <summary>
+ Load transfer list into DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.ApplyStatusColors">
+ <summary>
+ Apply color coding to rows based on status
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.GetStatusFilter">
+ <summary>
+ Get current status filter
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.btnSearch_Click(System.Object,System.EventArgs)">
+ <summary>
+ Search button click
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.rbStatus_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ Status radio button changed
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.dgvTransfers_SelectionChanged(System.Object,System.EventArgs)">
+ <summary>
+ DataGridView selection changed
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.DisableActionButtons">
+ <summary>
+ Disable all action buttons
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.btnViewDetails_Click(System.Object,System.EventArgs)">
+ <summary>
+ View Details button click
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.ShowTransferDetails(System.Int32)">
+ <summary>
+ Show transfer details
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.btnApprove_Click(System.Object,System.EventArgs)">
+ <summary>
+ Approve button click
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.ApproveTransfer(System.Int32)">
+ <summary>
+ Approve transfer
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.btnReject_Click(System.Object,System.EventArgs)">
+ <summary>
+ Reject button click
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.RejectTransfer(System.Int32,System.String)">
+ <summary>
+ Reject transfer
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.btnExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Export button click
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.TransferConsumablesFrm.txtSearch_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ Enter key press in search textbox
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.InitializeForm">
+ <summary>
+ Initialize form settings and styles
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.StyleDataGridView(System.Windows.Forms.DataGridView)">
+ <summary>
+ Style DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.LoadFilterData">
+ <summary>
+ Load filter data (Departments, Positions)
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.LoadEmployees">
+ <summary>
+ Load employees with filters
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.txtSearch_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Search text changed with delay
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.btnClearFilters_Click(System.Object,System.EventArgs)">
+ <summary>
+ Clear filters button
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.btnRefresh_Click(System.Object,System.EventArgs)">
+ <summary>
+ Refresh data
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.btnAddEmployee_Click(System.Object,System.EventArgs)">
+ <summary>
+ Add new employee
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.btnViewDetails_Click(System.Object,System.EventArgs)">
+ <summary>
+ View employee details
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.btnEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Edit employee
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.btnDelete_Click(System.Object,System.EventArgs)">
+ <summary>
+ Delete employee
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.btnPrintQR_Click(System.Object,System.EventArgs)">
+ <summary>
+ Print QR codes for selected employees
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.btnExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Export employees data
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.dgvEmployees_SelectionChanged(System.Object,System.EventArgs)">
+ <summary>
+ DataGridView selection changed - enable/disable action buttons
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.ExportToCSV(System.String)">
+ <summary>
+ Export to CSV
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.ExportToExcel(System.String)">
+ <summary>
+ Export to Excel (basic implementation)
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.LogActivity(System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.EmployeeManagementFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.AuthenticateUser(System.String,System.String)">
+ <summary>
+ Authenticate user against database
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.VerifyPassword(System.String,System.String)">
+ <summary>
+ Verify password against stored hash
+ For demo: using simple SHA256 hash
+ In production: use BCrypt or Argon2
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.btnClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ Close button
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.HashPassword(System.String)">
+ <summary>
+ Hash password using SHA256
+ NOTE: In production, use BCrypt.Net-Next NuGet package for better security
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log user activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.UpdateLastLogin(System.Int32)">
+ <summary>
+ Update user's last login timestamp
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.frmLogin_Load(System.Object,System.EventArgs)">
+ <summary>
+ Form load event - can add initialization code here
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.txtPassword_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ Handle Enter key press on password field
+ </summary>
+</member>
+<member name="M:AssetTracking.loginFrm.CreateDefaultAdmin">
+ <summary>
+ Optional: Create a test user function for initial setup
+ Call this once to create admin user with hashed password
+ </summary>
+</member>
+<member name="M:AssetTracking.mainFrm.ApplySecurityAccess">
+ <summary>
+ Apply security access based on user permissions
+ </summary>
+</member>
+<member name="M:AssetTracking.mainFrm.RepositionSidebarControls">
+ <summary>
+ Reposition sidebar controls to remove gaps from hidden buttons
+ </summary>
+</member>
+<member name="M:AssetTracking.mainFrm.InitializeUserInterface">
+ <summary>
+ Initialize user interface elements
+ </summary>
+</member>
+<member name="M:AssetTracking.mainFrm.AddButtonClickHandlers">
+ <summary>
+ Add click handlers for all menu buttons
+ </summary>
+</member>
+<member name="M:AssetTracking.mainFrm.CheckModuleAccess(System.Int32,System.String)">
+ <summary>
+ Check if user has access to a module and show message if not
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.InitializeForm">
+ <summary>
+ Initialize form settings
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.StyleDataGridView">
+ <summary>
+ Style the DataGridView
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.AddContextMenu">
+ <summary>
+ Add context menu for right-click actions
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.LoadCategories">
+ <summary>
+ Load asset categories
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.cboCategory_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Load subcategories based on selected category
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.LoadAssets">
+ <summary>
+ Load assets with filters
+ </summary>
+</member>
+<member name="F:AssetTracking.ManageAssetsFrm.searchTimer">
+ <summary>
+ Handle search text change with delay
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.cboSubcategory_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Handle filter changes
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.btnClearFilters_Click(System.Object,System.EventArgs)">
+ <summary>
+ Clear all filters
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.btnAddAsset_Click(System.Object,System.EventArgs)">
+ <summary>
+ Add new asset
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.btnRefresh_Click(System.Object,System.EventArgs)">
+ <summary>
+ Refresh data
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.btnPrintQR_Click(System.Object,System.EventArgs)">
+ <summary>
+ Print QR code for selected asset
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.btnExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Export assets to Excel/CSV
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.ExportToCSV(System.String)">
+ <summary>
+ Export DataGridView to CSV
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.dgvAssets_CellDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ Handle double-click to view details
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.ViewAssetDetails(System.Object,System.EventArgs)">
+ <summary>
+ View asset details
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.EditAsset(System.Object,System.EventArgs)">
+ <summary>
+ Edit selected asset
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.DeleteAsset(System.Object,System.EventArgs)">
+ <summary>
+ Delete selected asset
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.ManageAssetsFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.NewTransferFrm_Load(System.Object,System.EventArgs)">
+ <summary>
+ Form Load - Initialize
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.LoadAvailableAssets">
+ <summary>
+ Load available assets - UPDATED TO SHOW EMPLOYEES
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.LoadDepartments">
+ <summary>
+ Load departments into dropdown
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.LoadEmployeesByDepartment(System.Int32)">
+ <summary>
+ Load employees by department - UPDATED TO USE EMPLOYEES
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.cboAsset_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Asset selection changed
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.LoadCurrentAssetInfo(System.Int32)">
+ <summary>
+ Load current asset information - UPDATED TO USE EMPLOYEES
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.ClearCurrentInfo">
+ <summary>
+ Clear current info panel
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.cboDepartment_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Department selection changed
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.ValidateInput">
+ <summary>
+ Validate input
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.btnSubmit_Click(System.Object,System.EventArgs)">
+ <summary>
+ Submit button click - UPDATED TO USE EMPLOYEES
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cancel button click
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.LogActivity(System.Int32,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Log activity to database
+ </summary>
+</member>
+<member name="M:AssetTracking.NewTransferFrm.GetLocalIPAddress">
+ <summary>
+ Get local IP address
+ </summary>
+</member>
+</members>
+</doc>
